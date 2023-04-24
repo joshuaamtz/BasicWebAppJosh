@@ -148,7 +148,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
       <p>Joshua Martinez</p>
     </footer>
 
-    <button type="button" class="w3-btn w3-grey w3-round" onclick="document.location.reload(true)">Restart</button>
+    <button type="button" class="w3-btn w3-grey w3-round" onclick="window.location.reload()">Restart</button>
   </center>
 </div>
 
@@ -189,7 +189,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   // Add event listener to the restart button to refresh the page.
   var restartBtn = document.querySelector('.w3-btn');
   restartBtn.addEventListener('click', function() {
-    window.location.reload(true);
+    window.location.reload();
   });
 </script>
 
@@ -202,4 +202,5 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 </body>
 </html>
+
 
