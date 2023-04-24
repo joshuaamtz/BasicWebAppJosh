@@ -135,7 +135,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	
 <!--THIRD SUBPAGE-->
-			  <script>
+<div id="three" class="page">
+  <div id="header4" class="w3-container w3-flat-carrot">
+    <h1>Results</h1>
+	      </div>
+  <center>
+    <div id="content4" class="w3-container">
+      <p>The lightsaber you would have is...</p>
+</div>
+	  			  <script>
 (function() {
   function showResult() {
     var side = document.querySelector('input[name="side"]:checked').value;
@@ -164,21 +172,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     }
     document.getElementById("content4").innerHTML += "<p>" + result + "</p>";
   }
-    </div>
-  <center>
-    <div id="content4" class="w3-container">
-      <p>The lightsaber you would have is...</p>
-</div>
+
   showResult();
 })();
 </script>
-<div id="three" class="page">
-  <div id="header4" class="w3-container w3-flat-carrot">
-    <h1>Results</h1>
-	  
-
-
-
+	  </div>
 <!--Footer!-->
 <footer class="w3-bottom w3-container w3-flat-carrot">
   <p>Joshua Martinez</p>
