@@ -183,10 +183,16 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     resultElement.innerHTML = result;
     document.getElementById("content4").appendChild(resultElement);
   }
-  window.onload = function() {
-    showResult();
-  };
+
+  showResult(); // Call the function directly.
+
+  // Add event listener to the restart button to refresh the page.
+  var restartBtn = document.querySelector('.w3-btn');
+  restartBtn.addEventListener('click', function() {
+    window.location.reload(true);
+  });
 </script>
+
 
 <!--Footer!-->
 <footer class="w3-bottom w3-container w3-flat-carrot">
