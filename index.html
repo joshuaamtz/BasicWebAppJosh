@@ -144,6 +144,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
  <p>The lightsaber you would have is...</p>
  </div>
  <script>
+ window.onload = function() {
  var side = document.querySelector('input[name="side"]:checked').value;
  var persona = document.querySelector('input[name="persona"]:checked').value;
 
@@ -169,6 +170,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
  result = "Purple";
  }
  document.getElementById("content4").innerHTML += "<p>" + result + "</p>";
+ };
  </script>
  <a href="#content" class="w3-btn w3-grey w3-round">Restart Quiz</a>
  </center>
