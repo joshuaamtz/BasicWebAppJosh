@@ -134,17 +134,25 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	
-	<!--THIRD SUBPAGE-->
-	<div id="three" class="page">
-	 <div id="header4" class="w3-container w3-flat-carrot">
-	 <h1>Results</h1>
-	 </div>
-	 <center>
-	 <div id="content4" class="w3-container">
-	 <p>The lightsaber you would have is...</p>
-	 </div>
-	 <script>
-window.onload = function() {
+<!--THIRD SUBPAGE-->
+<div id="three" class="page">
+  <div id="header4" class="w3-container w3-flat-carrot">
+    <h1>Results</h1>
+  </div>
+  <center>
+    <div id="content4" class="w3-container">
+      <p>The lightsaber you would have is...</p>
+    </div>
+    <a href="#content" class="w3-btn w3-grey w3-round">Restart Quiz</a>
+  </center>
+</div>
+
+<!--Footer!-->
+<footer class="w3-bottom w3-container w3-flat-carrot">
+  <p>Joshua Martinez</p>
+</footer>
+
+<script>
   function showResult() {
     var side = document.querySelector('input[name="side"]:checked').value;
     var persona = document.querySelector('input[name="persona"]:checked').value;
@@ -172,9 +180,10 @@ window.onload = function() {
     }
     document.getElementById("content4").innerHTML += "<p>" + result + "</p>";
   }
+  
   showResult();
-};
-	 </script>
+</script>
+
 	 <a href="#content" class="w3-btn w3-grey w3-round">Restart Quiz</a>
 	 </center>
 	 </div>
