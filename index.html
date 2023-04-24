@@ -134,52 +134,50 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	
-	<!--THIRD SUBPAGE-->
-	<div id="three" class="page">
-	 <div id="header4" class="w3-container w3-flat-carrot">
-	 <h1>Results</h1>
-	 </div>
-	 <center>
-	 <div id="content4" class="w3-container">
-	 <p>The lightsaber you would have is...</p>
-	 </div>
-	 <script>
-	 var side = document.querySelector('input[name="side"]:checked').value;
-	 var persona = document.querySelector('input[name="persona"]:checked').value;
-	
-	 // Calculate result based on user input.
-	 var result;
-	 if (side === "Light" && persona === "Passionate") {
-	 result = "Purple";
-	 } else if (side === "Light" && persona === "Loyal") {
-	 result = "Blue";
-	 } else if (side === "Light" && persona === "Open") {
-	 result = "Green";
-	 } else if (side === "Grey" && persona === "Passionate & Unapologetic") {
-	 result = "Orange";
-	 } else if (side === "Grey" && persona === "Protective & Loyal") {
-	 result = "Yellow";
-	 } else if (side === "Grey" && persona === "Indepedent & Open-Minded") {
-	 result = "White";
-	 } else if (side === "Dark" && persona === "Passionate & Unapologetic") {
-	 result = "Red";
-	 } else if (side === "Dark" && persona === "Protective & Loyal") {
-	 result = "Black";
-	 } else if (side === "Dark" && persona === "Indepedent & Open-Minded") {
-	 result = "Purple";
-	 }
-	 document.getElementById("result").innerHTML = result;
-	 </script>
-	 </center>
-         <div id="content4" class="w3-container">
-	 <presult></p>
-	 </div>
-	 
-	<!--Footer!-->
-	<footer class="w3-bottom w3-container w3-flat-carrot">
-		<p>Joshua Martinez</p>
-	</footer>
-	</div>
+<!--THIRD SUBPAGE-->
+<div id="three" class="page">
+ <div id="header4" class="w3-container w3-flat-carrot">
+ <h1>Results</h1>
+ </div>
+ <center>
+ <div id="content4" class="w3-container">
+ <p>The lightsaber you would have is...</p>
+ </div>
+ <script>
+ var side = document.querySelector('input[name="side"]:checked').value;
+ var persona = document.querySelector('input[name="persona"]:checked').value;
+
+ // Calculate result based on user input.
+ var result;
+ if (side === "Light" && persona === "Passionate") {
+ result = "Purple";
+ } else if (side === "Light" && persona === "Loyal") {
+ result = "Blue";
+ } else if (side === "Light" && persona === "Open") {
+ result = "Green";
+ } else if (side === "Grey" && persona === "Passionate & Unapologetic") {
+ result = "Orange";
+ } else if (side === "Grey" && persona === "Protective & Loyal") {
+ result = "Yellow";
+ } else if (side === "Grey" && persona === "Indepedent & Open-Minded") {
+ result = "White";
+ } else if (side === "Dark" && persona === "Passionate & Unapologetic") {
+ result = "Red";
+ } else if (side === "Dark" && persona === "Protective & Loyal") {
+ result = "Black";
+ } else if (side === "Dark" && persona === "Indepedent & Open-Minded") {
+ result = "Purple";
+ }
+ document.getElementById("content4").innerHTML += "<p>Result: " + result + "</p>";
+ </script>
+ </center>
+ 
+<!--Footer!-->
+<footer class="w3-bottom w3-container w3-flat-carrot">
+    <p>Joshua Martinez</p>
+</footer>
+</div>
+
 	
 	</body>
 	</html>
