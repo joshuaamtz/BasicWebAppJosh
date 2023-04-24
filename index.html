@@ -141,7 +141,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	 </div>
 	 <center>
 	 <div id="content4" class="w3-container">
-	 // <p>The lightsaber you would have is...</p>
+	 <p>The lightsaber you would have is...</p>
 	 </div>
 	 <script>
 	 var side = document.querySelector('input[name="side"]:checked').value;
@@ -168,13 +168,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	 } else if (side === "Dark" && persona === "Indepedent & Open-Minded") {
 	 result = "Purple";
 	 }
-	 document.write("The lightsaber you would have is " + result + ".");
-	 document.getElementById("result").innerHTML = result;
-	 </script>
+         document.getElementById("result").innerHTML = result;
+	 document.write(result);
+	 
 	 </div>
 	 </center>
          <div id="content4" class="w3-container">
-	 <p> id="result" </p>
+	 <p> id="result" </p> 
 	 </div>
 	 
 	<!--Footer!-->
@@ -182,6 +182,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Joshua Martinez</p>
 	</footer>
 	</div>
-	
+ 	</script>
 	</body>
 	</html>
