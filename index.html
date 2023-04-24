@@ -138,63 +138,61 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <div id="three" class="page">
   <div id="header4" class="w3-container w3-flat-carrot">
     <h1>Results</h1>
-	      </div>
+  </div>
   <center>
     <div id="content4" class="w3-container">
       <p>The lightsaber you would have is...</p>
-	    	  			  <script>
-window.onload = function() {
-  showResult();
-};
-	    </script>
-	    
+    </div>
+    <script>
+      window.onload = function() {
+        showResult();
+      };
+
+      function showResult() {
+        var side = document.querySelector('input[name="side"]:checked').value;
+        var persona = document.querySelector('input[name="persona"]:checked').value;
+
+        // Calculate result based on user input.
+        var result;
+        if (side === "Light" && persona === "Passionate") {
+          result = "Purple";
+        } else if (side === "Light" && persona === "Loyal") {
+          result = "Blue";
+        } else if (side === "Light" && persona === "Open") {
+          result = "Green";
+        } else if (side === "Grey" && persona === "Passionate") {
+          result = "Orange";
+        } else if (side === "Grey" && persona === "Loyal") {
+          result = "Yellow";
+        } else if (side === "Grey" && persona === "Open") {
+          result = "White";
+        } else if (side === "Dark" && persona === "Passionate") {
+          result = "Red";
+        } else if (side === "Dark" && persona === "Loyal") {
+          result = "Black";
+        } else if (side === "Dark" && persona === "Open") {
+          result = "Purple";
+        }
+
+        var resultElement = document.createElement("p");
+        resultElement.innerHTML = result;
+        document.getElementById("content4").appendChild(resultElement);
+      }
+    </script>
+    <!--Footer!-->
+    <footer class="w3-bottom w3-container w3-flat-carrot">
+      <p>Joshua Martinez</p>
+    </footer>
+
+    <a href="#content" class="w3-btn w3-grey w3-round">Restart</a>
+  </center>
 </div>
-	  			  <script>
-window.onload = function() {
-  showResult();
-};
 
-function showResult() {
-  var side = document.querySelector('input[name="side"]:checked').value;
-  var persona = document.querySelector('input[name="persona"]:checked').value;
-
-  // Calculate result based on user input.
-  var result;
-  if (side === "Light" && persona === "Passionate") {
-    result = "Purple";
-  } else if (side === "Light" && persona === "Loyal") {
-    result = "Blue";
-  } else if (side === "Light" && persona === "Open") {
-    result = "Green";
-  } else if (side === "Grey" && persona === "Passionate") {
-    result = "Orange";
-  } else if (side === "Grey" && persona === "Loyal") {
-    result = "Yellow";
-  } else if (side === "Grey" && persona === "Open") {
-    result = "White";
-  } else if (side === "Dark" && persona === "Passionate") {
-    result = "Red";
-  } else if (side === "Dark" && persona === "Loyal") {
-    result = "Black";
-  } else if (side === "Dark" && persona === "Open") {
-    result = "Purple";
-  }
-  document.getElementById("content4").innerHTML += "<p>" + result + "</p>";
-}
-</script>
 <!--Footer!-->
 <footer class="w3-bottom w3-container w3-flat-carrot">
   <p>Joshua Martinez</p>
 </footer>
+</div>
 
-	 <a href="#content" class="w3-btn w3-grey w3-round"> Restart</a>
-	 </center>
-	 </div>
-
-	<!--Footer!-->
-	<footer class="w3-bottom w3-container w3-flat-carrot">
-	    <p>Joshua Martinez</p>
-	</footer>
-	</div>	
-	</body>
-	</html>
+</body>
+</html>
