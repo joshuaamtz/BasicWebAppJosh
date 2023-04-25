@@ -143,61 +143,50 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     <div id="content4" class="w3-container">
       <p>The lightsaber you would have is...</p>
     </div>
+    <script>
+      window.onload = function() {
+        showResult();
+      };
+
+      function showResult() {
+        var side = document.querySelector('input[name="side"]:checked').value;
+        var persona = document.querySelector('input[name="persona"]:checked').value;
+
+        // Calculate result based on user input.
+        var result;
+        if (side === "Light" && persona === "Passionate") {
+          result = "Purple";
+        } else if (side === "Light" && persona === "Loyal") {
+          result = "Blue";
+        } else if (side === "Light" && persona === "Open") {
+          result = "Green";
+        } else if (side === "Grey" && persona === "Passionate") {
+          result = "Orange";
+        } else if (side === "Grey" && persona === "Loyal") {
+          result = "Yellow";
+        } else if (side === "Grey" && persona === "Open") {
+          result = "White";
+        } else if (side === "Dark" && persona === "Passionate") {
+          result = "Red";
+        } else if (side === "Dark" && persona === "Loyal") {
+          result = "Black";
+        } else if (side === "Dark" && persona === "Open") {
+          result = "Purple";
+        }
+
+        var resultElement = document.createElement("p");
+        resultElement.innerHTML = result;
+        document.getElementById("content4").appendChild(resultElement);
+      }
+    </script>
     <!--Footer!-->
     <footer class="w3-bottom w3-container w3-flat-carrot">
       <p>Joshua Martinez</p>
     </footer>
 
-    <button type="button" class="w3-btn w3-grey w3-round" onclick="window.location.reload()">Restart</button>
+    <button type="button" class="w3-btn w3-grey w3-round" onclick="document.location.reload(true)">Restart</button>
   </center>
 </div>
-			<script>	
-window.location.reload();
-		</script>
-
-<script>
-  function showResult() {
-    
-    var side = document.querySelector('input[name="side"]:checked').value;
-    var persona = document.querySelector('input[name="persona"]:checked').value;
-
-    // Calculate result based on user input.
-    var result;
-    if (side === "Light" && persona === "Passionate") {
-      result = "Purple";
-    } else if (side === "Light" && persona === "Loyal") {
-      result = "Blue";
-    } else if (side === "Light" && persona === "Open") {
-      result = "Green";
-    } else if (side === "Grey" && persona === "Passionate") {
-      result = "Orange";
-    } else if (side === "Grey" && persona === "Loyal") {
-      result = "Yellow";
-    } else if (side === "Grey" && persona === "Open") {
-      result = "White";
-    } else if (side === "Dark" && persona === "Passionate") {
-      result = "Red";
-    } else if (side === "Dark" && persona === "Loyal") {
-      result = "Black";
-    } else if (side === "Dark" && persona === "Open") {
-      result = "Purple";
-    }
-
-    var resultElement = document.createElement("p");
-    resultElement.innerHTML = result;
-    document.getElementById("content4").appendChild(resultElement);
-  }
-
-  showResult(); // Call the function directly.
-
-  // Add event listener to the restart button to refresh the page.
-  var restartBtn = document.querySelector('.w3-btn');
-  restartBtn.addEventListener('click', function() {
-    window.location.reload();
-  });
-	
-</script>
-
 
 <!--Footer!-->
 <footer class="w3-bottom w3-container w3-flat-carrot">
