@@ -148,36 +148,41 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         showResult();
       };
 
-      function showResult() {
-        var side = document.querySelector('input[name="side"]:checked').value;
-        var persona = document.querySelector('input[name="persona"]:checked').value;
+function showResult() {
+  var side = document.querySelector('input[name="side"]:checked').value;
+  var persona = document.querySelector('input[name="persona"]:checked').value;
 
-        // Calculate result based on user input.
-        var result;
-        if (side === "Light" && persona === "Passionate") {
-          result = "Purple";
-        } else if (side === "Light" && persona === "Loyal") {
-          result = "Blue";
-        } else if (side === "Light" && persona === "Open") {
-          result = "Green";
-        } else if (side === "Grey" && persona === "Passionate") {
-          result = "Orange";
-        } else if (side === "Grey" && persona === "Loyal") {
-          result = "Yellow";
-        } else if (side === "Grey" && persona === "Open") {
-          result = "White";
-        } else if (side === "Dark" && persona === "Passionate") {
-          result = "Red";
-        } else if (side === "Dark" && persona === "Loyal") {
-          result = "Black";
-        } else if (side === "Dark" && persona === "Open") {
-          result = "Purple";
-        }
+  // Calculate result based on user input.
+  var result;
+  if (side === "Light" && persona === "Passionate") {
+    result = "Purple";
+  } else if (side === "Light" && persona === "Loyal") {
+    result = "Blue";
+  } else if (side === "Light" && persona === "Open") {
+    result = "Green";
+  } else if (side === "Grey" && persona === "Passionate") {
+    result = "Orange";
+  } else if (side === "Grey" && persona === "Loyal") {
+    result = "Yellow";
+  } else if (side === "Grey" && persona === "Open") {
+    result = "White";
+  } else if (side === "Dark" && persona === "Passionate") {
+    result = "Red";
+  } else if (side === "Dark" && persona === "Loyal") {
+    result = "Black";
+  } else if (side === "Dark" && persona === "Open") {
+    result = "Purple";
+  }
 
-        var resultElement = document.createElement("p");
-        resultElement.innerHTML = result;
-        document.getElementById("content4").appendChild(resultElement);
-      }
+  var resultElement = document.createElement("p");
+  resultElement.innerHTML = result;
+  document.getElementById("content4").appendChild(resultElement);
+  
+  // Reload the page after appending the result element.
+  setTimeout(function() {
+    location.reload();
+  }, 3000); // Wait for 3 seconds before reloading the page.
+}
     </script>
     <!--Footer!-->
     <footer class="w3-bottom w3-container w3-flat-carrot">
